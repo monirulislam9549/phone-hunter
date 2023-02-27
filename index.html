@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phone Hunter</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="text-5xl text-center mt-5">Phone Hunter</h2>
+    </header>
+
+    <main>
+        <section>
+            <div class="flex justify-center">
+                <input id="search-field" type="text" placeholder="Search here..." class="input input-bordered input-accent w-full max-w-xs italic" />
+                <button onclick="searchPhone()" class="btn btn-active btn-primary">Search</button>
+            </div>    
+        </section>
+
+
+        <!-- modal -->
+        <section>
+            
+            <!-- The button to open modal -->
+
+
+<!-- Put this part before  -->
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="phone-name" class="font-bold text-lg"></h3>
+        <div id="phone-detail">
+            
+        </div>
+    
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn">Yay!</label>
+    </div>
+  </div>
+</div>
+
+        </section>
+
+        <section>
+            <div id="phone-container" class="grid grid-rows-1 md:grid-cols-3 gap-5 mt-10">
+            </div>
+            <div id="no-found-message" class="hidden">
+                <h3 class="text-red-500	text-2xl flex justify-center ">No Phone Found</h3>
+            </div>
+        </section>
+
+        <div id="show-all" class="flex justify-center hidden">
+            <div><button onclick="buttonShowAll()" class="btn btn-primary">Show All</button> </div>
+        </div>
+
+        <section id="loader" class="flex justify-center hidden">
+            <button class="btn loading">loading</button>
+        </section>
+
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
