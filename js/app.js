@@ -14,8 +14,8 @@ const displayPhone = (phone, dataLimit) => {
     // console.log(phone);
     const phoneContainer = document.getElementById('phone-container')
 const showAll = document.getElementById('show-all')
-    if(dataLimit && phone.length > 6){
-        phone = phone.slice(0,6)
+    if(dataLimit && phone.length > 9){
+        phone = phone.slice(0,9)
         showAll.classList.remove('hidden')
     }else{
         showAll.classList.add('hidden')
@@ -55,17 +55,17 @@ const processSearch = (dataLimit)=>{
     toggleSpinner(true)
     const searchField= document.getElementById('search-field')
     loadPhones(searchField.value, dataLimit);
-    searchField.value = '';
+    // searchField.value = '';
 }
 
 const searchPhone =()=>{
-    processSearch(6)
+    processSearch(9)
  }
 
 //  input field enter key event handler
  document.getElementById('search-field').addEventListener('keypress', function(e){
     if(e.key === 'Enter'){
-        processSearch(6)
+        processSearch(9)
     }
  })
 
@@ -108,4 +108,4 @@ const searchPhone =()=>{
     
  }
 
-loadPhones('apple');
+loadPhones();
